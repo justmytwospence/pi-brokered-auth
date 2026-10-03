@@ -1,0 +1,30 @@
+{
+  "name": "@justmytwospence/pi-brokered-auth",
+  "version": "0.1.0",
+  "description": "Pi OAuth providers whose credentials come from a file a hub keeps fresh, so subscription refresh tokens live in one place.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "keywords": ["pi-package", "pi-extension", "pi", "oauth", "auth"],
+  "pi": {
+    "extensions": ["./src/index.ts"]
+  },
+  "scripts": {
+    "check": "npm run typecheck && npm test",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.87.1",
+    "@types/node": "^22.0.0",
+    "typescript": "^7.0.0",
+    "vitest": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justmytwospence/pi-brokered-auth"
+  }
+}
